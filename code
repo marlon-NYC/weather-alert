@@ -10,11 +10,10 @@ ACCOUNT_SID = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 AUTH_TOKEN = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 MY_NUMBER = "+1------4059"
 TWILIO_NUMBER= "+1------5207"
-
 WEATHER_PROMPT = "Binghamton is "
 
-#  sends text to my number
 
+#  sends text to my number
 def sendText(message):
   twilioCli = Client(ACCOUNT_SID, AUTH_TOKEN)
   twilioCli.messages.create(body=message, from_=TWILIO_NUMBER, to=MY_NUMBER)
